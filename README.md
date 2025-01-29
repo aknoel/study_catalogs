@@ -4,10 +4,10 @@ All study catalogs, Antelope parameter files, and catalog comparison keys for No
 Directory Structure:
 
 study_catalogs
- |-- "study_name"
-       |-- antelope_parameter_files
-       |-- catalog_comparison_keys
-       |-- catalogs
-            |-- analyst_reviewed
-            |-- machine_learning
-            |-- real_time
+/ |-- "study_name"
+/       |-- antelope_parameter_files
+/       |-- catalog_comparison_keys
+/       |-- catalogs
+/            |-- analyst_reviewed
+/            |-- machine_learning
+/            |-- real_time
