@@ -1,0 +1,146 @@
+#    This is the orbevproc parameter file
+
+#max_events_to_thread	4	# maximum number of events to process concurrently
+# test over switch back to 5 instead of 12
+#max_events_to_thread	5	# maximum number of events to process concurrently
+# try more thread  ?, Mitch was 12 20180917
+#max_events_to_thread	12	# maximum number of events to process concurrently
+# lower back down to 16, was 48, Mitch 20190214
+# lower back down to 16, was 48, Mitch 20200722
+# try changing from 48 to 40, Mitch 20200803
+# set max_events_to_thread on  oxygen 20200810, was 40 before changing to 12 
+max_events_to_thread	18	# maximum number of events to process concurrently
+#max_events_to_thread	40	# maximum number of events to process concurrently
+#max_events_to_thread	48	# maximum number of events to process concurrently
+#max_events_to_thread	32	# maximum number of events to process concurrently
+
+#    This is the list of processing modules to be run
+
+event_processes &Tbl{
+	#perl_file	perl_class		parameters
+	Magnitude.pm
+	Mlrichter.pm	Mlrichter		mlrichter_params
+#	/usr/local/aec/5.8/data/evproc/Mlrichter_aec.pm	Mlrichter_aec		mlrichter_aec_params
+#	Commit out 20200722 Mbusneic.pm, Mitch
+# 	Mbusneic.pm	Mbusneic		mbusneic_params
+#        MwpA.pm         MwpA                    mwpa_params
+}
+
+#    These are parameter templates for each of the processing modules
+
+mlrichter_params &Arr{
+	channels &Tbl{
+#	snet_expr chan_expr      noise_twin signal_twin   snr_thresh    maxclip
+#     	   sta_expr          filter    noise_toffset signal_toffset minclip
+     	.* .*    BHZ.* 	auto     10.0 10.0 f2.0     10.0 0.5
+     	.* .*    [ES]HZ autosp   10.0 10.0 f2.0     10.0 0.5	-2048	2047
+	}
+	reject &Tbl{
+#	snet_expr sta_expr
+	AV	ACH	
+	AV	AU22
+	AV	AUE
+	AV	AUJK
+	AV	AUNW
+	AV	AUW
+	AV	AUL
+	AK	BGLC	
+	AV	BLHA
+	AK	CAPN	
+	AK	CHX
+	AV	CKN	
+	AV	CRP	
+	AV	DFR
+	AK	FIRE	
+	AK	HOM
+	AK	HUR
+	CN	HYT
+	AV	KIWB
+	AV 	KOFP
+	AK 	JPK	
+	AT	MID	
+	AV	MMN	
+	AV	RDWB
+	AV	TAFP
+	AV	WEBT
+	AT	YKU2
+	CN 	YUK1	
+	CN 	YUK2	
+	CN 	YUK3	
+	CN 	YUK4	
+	CN 	YUK5	
+	CN 	YUK6	
+	CN 	YUK7	
+	IM	.*
+	ATTU	.*
+	}
+	update_time		10.0
+	maximum_wait_time	30.0
+#	maximum_wait_time	300.0
+	maximum_bad_fraction	0.2
+	auth_accept		oa_op|oa_opDbg|antassocDbgMl|antassocDbg|antassoc
+        station_number_minimum 	2
+# changed station_number_maximum from 40 to 35 Mitch 20200803
+        station_number_maximum  35	
+#        station_number_maximum  40	
+#        station_number_maximum  30	
+#        station_percentage_minimum 0.0
+        uncertainty_maximum   	1.0
+	output_magtype		ml
+	output_auth		orbml
+	output_stamag		yes
+	output_wfmeas		no
+}
+
+mbusneic_params &Arr{
+	channels &Tbl{
+#	snet_expr chan_expr               noise_twin signal_twin  snr_thresh
+#     	   sta_expr    filter                  noise_toffset signal_toffset 
+     	.* .*     BHZ.*  auto               30.0 10.0  20.0    10.0 0.5
+	}
+	reject &Tbl{
+#	snet_expr sta_expr
+	IM	.*
+	}
+
+	update_time		20.0
+#	maximum_wait_time	120.0
+	#maximum_wait_time	300.0
+	maximum_wait_time	30.0
+	maximum_bad_fraction	0.2
+	auth_accept		oa_op|oa_opDbg|antassocDbgMl|antassocDbg|antassoc
+        station_number_minimum 	2	
+        uncertainty_maximum   	0.7
+	output_magtype		mb
+	output_auth		orbmb
+	output_stamag		yes
+	output_wfmeas		no
+}
+
+mwpa_params &Arr{
+        channels &Tbl{
+#       snet_expr chan_expr                 filter_tpad signal_twin  snr_thresh
+#          sta_expr      filter                  tpivot_toffset sarrival_toffset
+        .* .*     BHZ.*  none              30.0 5.0  500.0    0.0 0.5
+        }
+        reject &Tbl{
+#       snet_expr sta_expr
+        IM        .*
+        ATTU      .*
+        }
+        update_time             10.0
+#        maximum_wait_time       300.0
+        maximum_wait_time       200.0
+        auth_accept             oa_op|oa_opDbg|antassocDbgMl|antassocDbg|antassoc
+        output_magtype          mwp
+        output_auth             orbmwp
+        output_stamag           yes
+        output_wfmeas           no 
+        station_number_minimum  2
+        uncertainty_maximum     0.7
+        min_duration            5.0
+        snr_max_off_duration    10.0
+}
+
+pf_revision_time 1178244388
+
