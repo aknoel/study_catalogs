@@ -12,3 +12,10 @@ Directory Structure:
 │       ├── machine_learning
 │       └── real_time
 ```
+
+## Catalog Plots
+Catalog comparison plots for each study, listed in alphabetical order.
+![Alt text](aleutian/Aleutian_TimeTrack_white.png)
+![Alt text](aleutian/Anchorage_TimeTrack_white.png)
+![Alt text](aleutian/IcyBay_TimeTrack_white.png)
+![Alt text](aleutian/Purcell_TimeTrack_white.png)
