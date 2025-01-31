@@ -1,0 +1,97 @@
+,lat,lon,depth,time,evid,nass,ml,sdobs,etype,Annotated
+119,61.2628,-149.9288,14.6628,1543599335,5908,76,5.86,0.7332,D,Duplicate of MATCHED evid #5924 (same signal)
+134,61.2599,-150.1181,0.6825,1543600197,5980,6,3.5,1.1587,n,Duplicate P-arrivals assigned to S-arrivals and associated as new event
+137,61.1383,-149.823,100,1543599792,5944,8,4.67,0.838,n,Duplicate P-arrivals assigned to S-arrivals and associated as new event
+142,61.1845,-149.9197,1.1429,1543600654,6010,15,3.49,0.8964,-,"earthquake — many unpromoted detections, location is kind of a mess"
+149,61.3904,-150.1218,0,1543600907,6045,4,4.2,0.7389,D,Duplicate of MATCHED evid #6070
+154,61.3728,-149.9718,27.5057,1543601329,6058,21,3.36,1.0388,-,earthquake 
+163,61.1871,-149.4778,12.8983,1543601614,6076,7,3.38,0.7051,-,earthquake — lots of unpromoted detections
+189,61.1612,-150.2265,67.7924,1543602793,6144,8,3.64,0.8891,n,Duplicate P-arrivals assigned to S-arrivals and associated as new event
+195,61.274,-149.9186,0.0058,1543602567,6122,7,3.4,0.836,n,Duplicate P-arrivals assigned to S-arrivals and associated as new event
+197,61.4839,-150.1141,1.1776,1543603010,6165,8,3.93,0.7948,D,"Duplicate of  MATCHED evid #6184 (6218, 6153)"
+208,61.5339,-150.007,50.7484,1543603371,6201,12,3.04,0.8547,-,earthquake — P-only location
+218,61.4063,-150.3227,0.298,1543603661,6228,5,3.76,0.7853,n,Duplicate P-arrivals assigned to S-arrivals and associated as new event
+219,61.2644,-149.2933,0.1793,1543603570,6222,7,3.5,1.0552,D,Duplicate of MATCHED evid #6238
+249,61.5367,-150.105,0.0045,1543605169,6307,10,3.17,0.8442,D,"Duplicate of MATCHED evid #6323 (6346, ...)"
+252,61.3796,-150.1066,5.0001,1543604798,6277,74,3.68,0.7405,-,earthquake
+273,61.5599,-150.1196,0.8339,1543606110,6410,12,4.56,0.6908,n,Duplicate P-arrivals assigned to S-arrivals and associated as new event
+303,61.308,-149.8805,23.1851,1543606888,6467,29,3.18,0.8583,-,earthquake — seems like poor location
+325,61.5942,-149.9185,6.6848,1543607928,6540,4,2.96,0.1211,n,Duplicate P-arrivals assigned to S-arrivals and associated as new event
+326,61.2136,-149.9288,0.087,1543607990,6542,4,3.08,0.8163,n,Duplicate P-arrivals assigned to S-arrivals and associated as new event
+335,61.2107,-149.9921,35.4799,1543608178,6565,5,3.27,0.8814,D,Duplicate of MATCHED evid #6557
+340,61.2396,-149.3641,70.5139,1543608125,6574,4,3.1,0.0997,D,Duplicate of MATCHED evid #6566
+342,61.4426,-149.9851,47.1817,1543608423,6571,45,3.66,0.7357,-,earthquake
+368,61.487,-150.107,12.2801,1543609691,6673,7,4.97,0.3266,-,"earthquake — in coda of larger event, missing many clear arrivals"
+371,61.3897,-150.1206,0,1543609774,6685,5,3.9,0.6166,D,Duplicate of MATCHED evid #6685
+385,61.2772,-149.5033,0.6686,1543609697,6712,5,4.72,1.0396,D,Duplicate of evid #6673
+394,61.383,-150.0797,37.3946,1543610267,6718,9,2.76,0.5778,-,"earthquake — overlapping, this is second signal (could use more detections)"
+396,61.3845,-149.9045,13.6503,1543610454,6724,38,3.74,0.4969,D,Duplicate of MATCHED evid #6783
+401,61.6039,-149.4429,5.0329,1543610802,6754,5,3.09,0.7296,D,Duplicate of MATCHED evid #6800
+434,61.1797,-149.1461,2.696,1543611502,6848,7,3.06,0.7281,D,Duplicate of MATCHED evid #6813
+451,61.385,-150.1203,6.9282,1543612276,6857,107,3.6,0.8089,D,Duplicate of MATCHED evid #6920 (this is the better solution)
+460,61.29,-149.712,0.0353,1543612755,6897,10,3.53,0.693,n,Duplicate P-arrivals assigned to S-arrivals and associated as new event
+463,61.3787,-150.0634,11.8126,1543612716,6887,37,3.01,0.8377,-,"earthquake — messy, overlapping signals"
+475,61.4552,-150.0717,36.0468,1543614214,6983,11,2.14,1.0278,-,"earthquake — messy, overlapping signals"
+529,61.5512,-150.0981,40.1616,1543616307,7124,18,2.52,0.6653,-,"earthquake — messy, overlapping signals"
+556,61.2007,-149.8926,16.6146,1543618090,7190,9,1.9,0.72,-,earthquake
+586,61.5898,-149.4161,7.7455,1543619660,7279,7,3.45,0.5843,n,Duplicate P-arrivals assigned to S-arrivals and associated as new event
+588,61.5178,-149.9212,14.9037,1543619266,7235,155,4.24,0.4332,-,earthquake — P-only location
+594,61.4997,-150.0117,0,1543619574,7260,49,3.46,0.9934,D,Duplicate of MATCHED evid #7271
+601,61.4492,-149.9991,18.4394,1543620570,7323,15,2.82,0.5898,D,Duplicate of MATCHED evid #7252
+602,61.4282,-149.9409,12.1425,1543620528,7322,14,2.66,0.6764,-,"earthquake — messy, overlapping signals"
+603,61.5666,-149.1389,36.1997,1543620016,7327,13,2.83,0.9153,D,Duplicate of MATCHED evid #7293
+611,61.3571,-149.978,33.4308,1543621134,7346,17,2.54,0.1732,D,Duplicate of MATCHED evid #7348
+616,61.3779,-150.0515,34.8344,1543621127,7349,11,2.58,0.6195,D,Duplicate of MATCHED evid #7348
+622,61.4377,-149.9103,33.7846,1543621500,7372,32,3.08,1.0217,-,earthquake — missing many detections
+663,61.3694,-149.3767,3.0156,1543623137,7492,13,3.58,1.2194,D,Duplicate of MATCHED evid #7548
+664,61.5487,-149.7807,7.4956,1543623288,7506,14,2.59,0.8162,-,earthquake
+692,61.3088,-150.1621,31.9607,1543624397,7579,25,-999,0.5059,-,earthquake
+693,61.2749,-149.9604,25.8456,1543624658,7594,15,2.49,0.7783,-,earthquake — missing many detections
+716,61.3137,-149.5086,7.8427,1543625687,7666,6,2.91,0.6782,n,Duplicate P-arrivals assigned to S-arrivals and associated as new event
+721,61.3904,-149.9345,3.7321,1543625507,7625,51,2.8,0.6442,D,Duplicate of MATCHED evid #7643 (this is the better solution)
+722,61.3928,-150.0555,42.2017,1543626160,7676,5,2.08,0.1456,D,Duplicate of MATCHED evid #7675
+730,61.1831,-149.4468,86.999,1543626184,7698,5,2.55,0.3996,-,real earthquake — in overlapping sequence (poor location)
+734,61.2648,-149.4964,4.7702,1543626781,7710,5,2,0.2679,-,earthquake — small
+766,61.4886,-149.9413,15.8684,1543628064,7801,45,2.61,0.965,-,earthquake — missing many S-detections
+809,61.3863,-149.9853,45.8593,1543630685,7928,10,3.07,0.5495,-,earthquake — small event befor quick successive larger event (overlapping signals)
+813,61.3367,-150.237,100,1543630912,7940,4,2.29,0.528,-,earthquake — in middle of many closely times events
+825,61.4206,-149.9261,43.1874,1543631743,7970,13,2.11,0.2783,-,earthquake
+844,61.3867,-150.1044,15.6659,1543632941,8024,12,1.66,0.6379,-,earthquake
+853,61.5005,-149.9257,30.1577,1543633461,8042,56,3.38,0.6169,-,"earthquake — this is a good, somewhat strange looking signal"
+859,61.3273,-150.1172,5.3609,1543633967,8064,43,2.67,0.8999,-,earthquake
+887,61.2812,-150.1257,0.543,1543635749,8140,12,2.16,0.9271,D,Duplicate of MATCHED evid #8139
+902,61.3326,-149.9775,36.7639,1543637008,8187,10,2.05,0.4961,-,earthquake — missing many clear detections
+908,61.2902,-150.1325,0,1543637398,8197,7,-999,0.6148,-,earthquake — P-only location
+919,61.3642,-149.8822,8.3044,1543638410,8232,20,2.11,0.8792,-,"earthquake — missing clear detections, and many arrivals seems to be close - but not quite in the right location"
+923,61.574,-150.1022,7.4229,1543638754,8242,33,2.83,0.9599,D,Duplicate of MATCHED evid #8246 (this is the better solution)
+940,61.4918,-149.8635,31.5707,1543640209,8295,7,2.52,0.5389,D,Duplicate of MATCHED evid #8294
+972,61.249,-150.3087,18.641,1543642155,8383,7,-999,1.3167,-,earthquake — missing clear detections
+973,61.3988,-150.0611,40.5083,1543642282,8385,4,-999,0.0119,-,earthquake — preceeds larger event
+1061,61.4815,-150.0288,40.0042,1543646797,8593,9,2.21,1.21,D,Duplicate of MATCHED evid #8592
+1108,61.4161,-149.9899,42.6695,1543648841,8761,5,-999,0.0084,-,earthquake — is this two events?
+1160,61.4098,-149.9234,6.1329,1543651808,8892,98,3.17,0.752,D,Duplicate of MATCHED evid #8904 (this is the better solution)
+1193,61.2988,-150.2414,34.0729,1543653809,9015,4,1.72,0.0069,-,earthquake — messy signal
+1231,61.3828,-150.1111,38.6817,1543656714,9133,8,1.65,0.2027,-,earthquake
+1266,61.4742,-149.9904,9.6473,1543658783,9217,5,2.39,0.0417,D,Duplicate of MATCHED evid #9216
+1280,61.3763,-150.1081,12.6284,1543659508,9243,106,3.53,0.5899,D,Duplicate of MATCHED evid #9279
+1291,61.6149,-150.0973,68.4613,1543660058,9277,10,2.32,0.7078,D,Duplicate of MATCHED evid #9274
+1304,61.4049,-150.1301,14.4893,1543660783,9308,40,2.62,0.7859,-,earthquake — missing many S-detections
+1325,61.3914,-150.0782,17.2758,1543662161,9360,16,1.74,0.8381,-,earthquake
+1356,61.5826,-149.8159,80,1543664308,9437,4,1.59,-1,-,earthquake
+1386,61.2715,-150.338,100,1543666497,9523,7,1.99,1.1416,-,earthquake — first of several in quick succession
+1391,61.2206,-149.4229,59.7825,1543666967,9537,4,2.39,0.2322,n,Duplicate P-arrivals assigned to S-arrivals and associated as new event
+1405,61.505,-150.1291,34.4665,1543668264,9575,4,-999,0.4979,-,earthquake
+1420,61.4706,-149.9099,35.2197,1543669137,9611,14,2.39,0.9252,-,earthquake — first of several in quick succession
+1504,61.4581,-149.9857,41.5878,1543673525,9811,14,2.04,0.7798,-,earthquake — missing many clear detections
+1505,61.3734,-149.4385,30.2587,1543673627,9821,4,2.13,0.0121,n,Duplicate P-arrivals assigned to S-arrivals and associated as new event
+1538,61.6017,-150.3156,96.414,1543676859,9906,6,1.95,0.721,-,earthquake — smaller and first of two in quick succession
+1548,61.2128,-149.8194,0.0764,1543677311,9935,4,2.26,0.4229,n,Duplicate P-arrivals assigned to S-arrivals and associated as new event
+1550,61.4747,-149.9147,36.1486,1543677701,9941,11,2.85,0.77,D,Duplicate of MATCHED evid #9939
+1558,61.4714,-150.0156,11.2068,1543677514,9931,52,2.47,0.7246,-,"earthquake (possible duplication of evid #9966, 9969)"
+1586,61.1876,-149.7125,5.9204,1543679233,10026,4,2.66,0.5259,D,"Duplicate of MATCHED evid #10003, 10025, 10002"
+1588,61.4854,-149.9178,36.0748,1543679777,10019,11,2.81,0.6359,D,Duplicate of MATCHED evid #10018
+1616,61.3957,-149.9168,15.4133,1543681743,10121,17,2.25,0.8633,-,earthquake
+1631,61.3258,-149.9184,3.8849,1543682112,10138,5,2,0.4031,n,Duplicate P-arrivals assigned to S-arrivals and associated as new event
+1641,61.3951,-149.9056,13.7282,1543683624,10201,14,1.88,0.7274,-,earthquake
+1660,61.3877,-149.9501,0.0284,1543684781,10233,31,2.5,0.9661,D,Duplicate of MATCHED evid 10224
+1665,61.3356,-150.0789,35.0334,1543685370,10250,7,1.72,0.3951,-,earthquake — two small overlapping events (first)

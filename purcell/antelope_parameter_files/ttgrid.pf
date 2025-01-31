@@ -1,0 +1,54 @@
+#	parameter file for ttgrid
+
+grids &Arr{
+	ak_shal &Arr{
+		mode		edp	# defines an equal-distance projection regular 3-D mesh
+		type		1d	# defines travel time based on 1-D structure model	##Added
+		ndist		1000	# number of distance nodes in 1-D grid			##Added
+		latr		59	# reference latitude	(origin of grid)
+		lonr	      	-152	# reference longitude	(origin of grid)
+		nx		341	# Number of X-axis distance grid nodes
+		ny		201	# Number of Y-axis distance grid nodes
+		xmin		-21	# Minimum value of X-axis distance grid in degrees
+		xmax		13	# Maximum value of X-axis distance grid in degrees
+		ymin		-7	# Minimum value of Y-axis distance grid in degrees
+		ymax		13	# Maximum value of Y-axis distance grid in degrees
+		compute_P	yes	# yes = Compute P travel times
+		compute_S	yes	# yes = Compute S travel times
+		method		tttaup	# method for computing travel times
+		model		iasp91	# model for computing travel times   (see /opt/antelope/4.11/data/tables/genloc/db/vmodel)
+		
+		stations &Tbl{
+				E17K
+				E18K
+				E19K
+				F17K
+				F18K
+				F19K
+				F20K
+				G17K
+				G18K
+				G19K
+				H17K
+				H18K
+				H19K
+				H20K
+				GCSA
+		}
+		
+
+		depths &Tbl{
+			5.0
+			10.0
+			15.0
+			20.0
+			25.0
+			30.0
+			35.0
+			40.0
+		}
+	}
+}
+
+
+pf_revision_time 1151130346

@@ -1,0 +1,98 @@
+#####################################################################
+# DEFAULTS (MOSTLY OVERWRITTEN BELOW)
+ave_type        rms     # Method for averaging (rms or filter)
+sta_twin        1.0     # short term average time window
+sta_tmin        1.0     # short term average minimum time for average
+sta_maxtgap     0.5     # short term average maximum time gap
+lta_twin        10.0    # long term average time window
+lta_tmin        5.0     # long term average minimum time for average
+lta_maxtgap     4.0     # long term average maximum time gap
+nodet_twin      2.0     # no detection if on time is less than this ###-MEW
+pamp            500.0   # plot amplitude
+thresh          4.0     # detection SNR threshold
+threshoff       2.0     # detection-off SNR threshold
+det_tmin        5.0     # detection minimum on time ###-MEW
+det_tmax        60.0    # detection maximum on time
+h               0       # plot channel height in pixels
+filter          none    # default filter
+iphase          D       # default iphase for detections
+process_twin    60.0    # data is processed in hunks of this duration
+
+#####################################################################
+# NOTES ON SETTINGS
+#    sta_tmin: default pf sets a'' sta_tmin = sta_twin
+#    sta_maxtgap: default pf have 0.5 for all 1/2*sta_tmin seems appropriate
+#    lta_twin: at least 5 times sta_twin
+#    lta_tmin: default pf has lta_tmin = 1/2 * lta_twin
+#    lta_maxtgap: seems appropriate to set it to 1/2*lta_twin
+#    filter: sta_twin should be >1.6 times the the low filter *period*
+
+#####################################################################
+#       - HF detector
+#       - LF detector
+
+bands   &Tbl{
+        &Arr{
+                sta_twin        1.0
+                sta_tmin        1.0
+                sta_maxtgap     0.5
+                lta_twin        10.0
+                lta_tmin        5.0
+                lta_maxtgap     4.0
+                nodet_twin      0.0
+                thresh          4.0
+                threshoff       2.0
+		filter          BW 1.0 4 0 0
+        }
+}
+
+#####################################################################
+# STATIONS AND CHANNELS
+# NOTE: Comparable field in orddetect pf's is netstachanlocs, not stachans.
+
+stachans        &Tbl{
+
+#Purcell Mountain Stations (15 total)
+	E17K   BH[ENZ]
+	E18K   BH[ENZ]
+	E19K   BH[ENZ]
+
+	F17K   BH[ENZ]
+	F18K   BH[ENZ]
+	F19K   BH[ENZ]
+	F20K   BH[ENZ]
+
+	G17K   BH[ENZ]
+	G18K   BH[ENZ]
+	G19K   BH[ENZ]
+
+	H17K   BH[ENZ]
+	H18K   BH[ENZ]
+	H19K   BH[ENZ]
+	H20K   BH[ENZ]
+	
+	GCSA   BH[ENZ]
+
+}
+
+# Individual channels may be rejected or ovewritten. See man page for details
+#       channels to reject
+
+reject &Tbl{
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

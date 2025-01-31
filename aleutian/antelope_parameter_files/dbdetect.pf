@@ -1,0 +1,146 @@
+#	Following are required and are used as overall defaultsug
+
+ave_type        rms     # Method for averaging (rms or filter)
+sta_twin        1.0     # short term average time window
+sta_tmin        1.0     # short term average minimum time for average
+sta_maxtgap     0.5     # short term average maximum time gap
+lta_twin        10.0    # long term average time window
+lta_tmin        5.0     # long term average minimum time for average
+lta_maxtgap     4.0     # long term average maximum time gap
+nodet_twin      2.0     # no detection if on time is less than this ###-MEW
+pamp            500.0   # plot amplitude
+thresh          4.0     # detection SNR threshold
+threshoff       2.0     # detection-off SNR threshold
+det_tmin        5.0     # detection minimum on time ###-MEW
+det_tmax        60.0    # detection maximum on time
+h               0       # plot channel height in pixels
+filter          none    # default filter
+iphase          D       # default iphase for detections
+process_twin    60.0    # data is processed in hunks of this duration
+
+
+#	At least one default band must be set set up in the bands table
+#	parameter values override default values above for each band
+
+bands   &Tbl{
+        &Arr{
+                sta_twin        1.0
+                sta_tmin        1.0
+                sta_maxtgap     0.5
+                lta_twin        10.0
+                lta_tmin        5.0
+                lta_maxtgap     4.0
+                thresh          4.0
+                threshoff       2.0
+		filter          BW 1.0 4 0 0
+        }
+}
+
+
+
+#####################################################################
+# STATIONS AND CHANNELS
+# NOTE: Comparable field in orddetect pf's is netstachanlocs, not stachans.
+
+stachans        &Tbl{
+	
+#Aleutian Island Gap Stations (42 total / 31 used)
+#STATIONS TRIMMED AS RECOVERED FROM db.detect FILES AVAILABLE
+
+#AVO Stations
+#Akutan
+	AHB   BHZ
+	AKBB   BH[ENZ]
+	AKGG   BH[ENZ]
+	AKHS   BH[ENZ]
+	AKLV   BH[ENZ]
+	AKMO   BH[EN]
+	AKRB   BH[ENZ]
+#	AKS   BH[ENZ]
+	AKSA   BH[ENZ]
+	AKV   BHZ
+	AKUT   BH[ENZ]
+	LVA   BHZ
+	ZRO   BHZ
+
+#Bogoslof
+#	BOGO   BHZ
+
+#Cleveland
+#	CLCO   BH[ENZ]
+##	CLEO   BH[ENZ]
+#	CLES   BH[ENZ]
+
+#Great Sitkin
+#	GSCK   BH[ENZ]
+#	GSIG   BH[ENZ]
+	GSMY   BH[ENZ]
+	GSSP   BH[ENZ]
+	GSTD   BH[ENZ]
+	GSTR   BH[ENZ]
+
+#Kanaga
+	KICM   BH[ENZ]
+	KIKV   BH[ENZ]
+	KIMD   BH[ENZ]
+#	KINC   BH[ENZ]
+#	KIRH   BH[ENZ]
+	KIWB   BH[ENZ]
+
+#Korovin	
+	KOFP   BHZ
+	KOKL   BHZ
+#	KOKV   BHZ
+#	KONE   BHZ
+#	KONW   BHZ
+	KOSE   BHZ
+	KOWE   BHZ
+
+#Makushin
+	MAPS   BH[ENZ]
+	MGOD   BH[ENZ]
+	MNAT   BHZ
+#	MREP   BH[ENZ]
+#	MSW   BH[ENZ]
+#	MTBL   BH[ENZ]
+
+#Okmok
+#	OKAK   EHZ
+	OKCE   BH[ENZ]
+#	OKCF   BH[ENZ]
+#	OKER   EHZ
+	OKFG   BHZ
+#	OKID   EHZ
+	OKNC   BH[ENZ]
+#	OKRE   EHZ
+	OKSO   BH[ENZ]
+#	OKSP   EHZ
+	OKTU   EHZ
+#	OKWE   EHZ
+#	OKWR   EHZ
+
+#Regional Stations
+	ADAG   BH[ENZ]
+#	ADK   BH[ENZ]
+	ADK   BH[12Z]_00
+	ATKA   BH[ENZ]
+	ETKA   BH[ENZ]
+#	NIKH   BH[ENZ]
+	UNV   BH[ENZ]
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

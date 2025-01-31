@@ -1,0 +1,628 @@
+#	Following are required and are used as overall defaultsug
+
+ave_type        rms     # Method for averaging (rms or filter)
+sta_twin        1.0     # short term average time window
+sta_tmin        1.0     # short term average minimum time for average
+sta_maxtgap     0.5     # short term average maximum time gap
+lta_twin        10.0    # long term average time window
+lta_tmin        5.0     # long term average minimum time for average
+lta_maxtgap     4.0     # long term average maximum time gap
+nodet_twin      2.0     # no detection if on time is less than this ###-MEW
+pamp            500.0   # plot amplitude
+thresh          4.0     # detection SNR threshold
+threshoff       2.0     # detection-off SNR threshold
+det_tmin        5.0     # detection minimum on time ###-MEW
+det_tmax        60.0    # detection maximum on time
+h               0       # plot channel height in pixels
+filter          none    # default filter
+iphase          D       # default iphase for detections
+process_twin    60.0    # data is processed in hunks of this duration
+
+
+#	At least one default band must be set set up in the bands table
+#	parameter values override default values above for each band
+
+bands   &Tbl{
+        &Arr{
+                sta_twin        1.0
+                sta_tmin        1.0
+                sta_maxtgap     0.5
+                lta_twin        10.0
+                lta_tmin        5.0
+                lta_maxtgap     4.0
+                thresh          4.0
+                threshoff       2.0
+		filter          BW 1.0 4 0 0
+        }
+}
+
+
+
+#####################################################################
+# STATIONS AND CHANNELS
+# NOTE: Comparable field in orddetect pf's is netstachanlocs, not stachans.
+
+stachans	&Tbl{
+# Akutan
+	AHB   BHZ  
+	AKBB   BH[ENZ] 
+	AKGG   BH[ENZ] 
+	AKHS   BH[ENZ] 
+	AKLV   BH[ENZ] 
+	AKMO   BH[ENZ] 
+	AKRB   BH[ENZ]
+#	AKS   EH[ENZ]
+	AKSA   BH[ENZ]
+	AKV   BHZ  
+	AKUT   BH[ENZ]
+	LVA   BHZ 
+	ZRO   BHZ   
+# Aniakchak whole network out 7/8/2011 
+## disabled 20211112 
+	ANNE   EHZ   
+##	ANNW   EHZ  
+	ANON   EHZ  
+##	ANPB   EHZ    
+	ANPK   EHZ   
+##	AZAC   EHZ 
+# Augustine  
+#	AU22   BH[ENZ]  
+	AUCH   BH[ENZ]  
+#	AUJA   BH[ENZ]  
+	AUJK   BHZ  
+	AUL   BH[ENZ]
+	AULG   BH[ENZ]  
+#	AUNO   BH[ENZ]  
+#	AUL   EHZ noisy 
+	AUQ   BH[ENZ]  
+	AUSB   BH[ENZ]  
+#	AUSS   BHZ
+#	AUW   EHZ  
+	AUWS   BH[ENZ]  
+# Bogoslof
+	BOGO   BHZ
+# Cleveland
+	CLCO   BH[ENZ]
+#	CLEO   BH[ENZ]
+	CLES   BH[ENZ]
+# Dutton      
+	DEER   BH[ENZ]
+	DT1   BHZ 
+	DTN   BHZ
+# Gareloi
+	GAEA   BH[ENZ]
+	GAKI   BH[ENZ]  
+	GALA   BH[ENZ]  
+	GANE   BH[ENZ]   
+#	GANO   BH[ENZ] 
+#	GASW   BH[NZ]
+# Great Sitkin
+#	GSCK   BH[ENZ]  
+	GSIG   BH[ENZ] 
+	GSMY   BH[ENZ]   
+	GSSP   BH[ENZ] 
+	GSTD   BH[NEZ]
+	GSTR   BH[ENZ]  
+# Ilianma. All very noisy 12/30/2010
+	ILCB   BH[ENZ]   
+#	ILNE   SH[ENZ]
+	ILS   BH[ENZ]  
+	ILSW   BH[ENZ]
+#	ILW   SH[ENZ] 
+#	IVE   EHZ  
+#	IVE   BHZ 
+# Kanaga
+	KICM   BH[ENZ]    
+	KIKV   BH[ENZ]  
+	KIMD   BH[ENZ] 
+#	KINC   BH[ENZ]  
+#	KIRH   BH[ENZ]  
+	KIWB   BH[ENZ] 
+# Katmai: bad timing on short period stations 1/10/15  
+	ACH   BH[ENZ] 
+	ANCK   BH[ENZ] 
+	CAHL   BHZ 
+	KAB2   BH[ENZ]
+#	KABR   EHZ 
+	KABU   BHZ
+#	KAHC   EHZ   
+	KAHG   BH[ENZ]  
+	KAKN   BHZ  	
+#	KAPH   EH[ENZ] 
+	KARR   BHZ 
+	KAVE   BH[ENZ]
+	KAWH   BHZ 
+#	KBM   EHZ noisy 
+	KCE   EHZ
+#	KCG   EHZ   
+#	KEL   EHZ  
+	KJL   BHZ 
+	KVT   EHZ 
+	MGLS   BHZ  
+# Korovin Keep only 3 stations for detections. 4 stations cause occasional mislocations due to telemetery dropouts. 
+	KOFP   BHZ   
+	KOKL   BHZ  
+#	KOKV   BHZ  
+#	KONE   BHZ  
+#	KONW   BHZ    
+	KOSE   BHZ  
+	KOWE   BHZ 
+# Little Sitkin   
+	LSNW   BH[ENZ] 
+	LSPA   BH[NEZ] 
+	LSSA   BH[ENZ] 
+	LSSE   BH[ENZ]  
+# Makushin 
+	MAPS   BH[ENZ]    
+	MGOD   BH[ENZ]    
+	MNAT   BHZ
+#	MREP   EHZ 
+	MSW   BH[NEZ]  
+	MTBL   BHZ 
+# Okmok
+	OKAK   EHZ 
+	OKCE   BH[ENZ] 
+#	OKCF   EHZ  
+	OKER   EHZ
+	OKFG   BH[ENZ] 
+#	OKID   EHZ out 
+	OKNC   BH[ENZ]  
+#	OKRE   EHZ 
+	OKSO   BH[ENZ]  
+#	OKSP   EHZ  
+#	OKTU   EHZ   
+#	OKWE   EHZ
+#	OKWR   EHZ  
+# Pavlof whole network noisy 2/26/2008
+	DOL   BHZ  
+#	HAG   SH[ENZ] 
+	PN7A   BH[ENZ] 
+	PS1A   BH[ENZ]  
+	PS4A   BH[ENZ]  
+	PV6A   SH[ENZ]  
+#	PVV   SHZ  
+# Peulik  
+	PLBL   BHZ 
+	PLK1   BH[ENZ] 
+	PLK2   BH[ENZ]
+	PLK3   BH[ENZ]
+	PLK5   BHZ 
+# Redoubt
+	NCT   BH[ENZ] 
+	RDDF   BH[ENZ] 
+	RDJH   BH[ENZ]   
+	RDSO   BH[ENZ]   
+	RDT   BH[ENZ]
+#	RDWB   BH[ENZ]   
+	RED   BH[ENZ] 
+#	RED   EH[EZ] out 
+#	REF   SH[ENZ] 
+# Semisopochnoi  
+	CEAP   BH[ENZ] 
+	CEPE   BH[ENZ] 
+	CERA   BH[ENZ] 
+#	CERB   BH[ENZ]   
+	CESW   BH[ENZ] 
+	CETU   BH[ENZ] 
+# Shishaldin
+	ISLZ   BH[ENZ]  
+	ISNN   SHZ 
+#	SSBA   BH[ENZ] 
+	SSLN   BH[ENZ]   
+#	SSLS   BH[EZ] off 10/23/2018 noisy  
+# Spurr 
+#	SPBG   BH[ENZ]
+	SPCG   BH[Z]  
+	SPCL   BH[Z]  
+#	SPCN   BH[ENZ]  
+	SPCP   BH[Z]  
+	SPCR   BH[ENZ] 
+	SPNN   BH[ENZ]  
+	SPU   BH[ENZ]  
+	SPWE   BHZ
+	STLK   BH[ENZ]  
+# Tanaga
+	TAFL   BHZ   
+	TAFP   BH[ENZ] 
+	TANO   BH[ENZ]
+	TAPA   BH[ENZ]  
+	TASE   BH[ENZ]
+# Veniaminof
+## disable 2021112
+	BPBC   EHZ
+##	VNFG   EHZ   
+	VNHG   EHZ 
+##	VNKR   EHZ
+##	VNNF   EHZ 
+##	VNSG   EHZ   
+	VNSS   EHZ   
+	VNSW   EHZ
+	VNWF   EHZ  
+# Westdahl 
+	WEBT   BH[ENZ]    
+#	WECS   BH[ENZ]
+	WESN   BHZ    
+	WESP   BH[ENZ]
+	WTUG   BHZ 	    
+# Wrangell whole network is noisy 9/28/2004
+	WACK   BH[ENZ] 
+#	WASW   SHZ 
+# Regional
+	ADAG   BH[ENZ]  
+	ADK   BH[ENZ] 
+	ADK   BH[12Z]_00 
+#	ADK   BH[12Z]_10 
+	AMKA   BH[ENZ]  
+	ANM   BH[ENZ]  
+	ATKA   BH[ENZ] 
+	BAGL   BH[ENZ]
+	BAL   BH[ENZ] 
+	BAE   BH[ENZ]
+	BAT   BH[ENZ]
+	BARK   BH[ENZ]
+	BARN   BH[ENZ]
+	BC01   SHZ   
+	BCP   BHZ
+	BERG   BH[ENZ] 
+	BESE   BHZ 
+#	BGLC   BH[ENZ] noisy
+	BM01   SHZ          
+	BMR   BH[ENZ]
+	BPAW   BH[ENZ] 
+	BRLK   BH[ENZ] 
+	BRSE   BH[ENZ] 
+	BVCY   HH[ENZ] 
+	BWN   BH[ENZ]   
+#	CAPN   BHZ 
+	CAST   BH[ENZ]     
+	CCB   BH[ENZ]
+	CHGN   BH[ENZ]  
+	CHI   BH[ENZ]  
+	CHN   BH[ENZ]  
+#	CHUM   BHZ 
+	CHX   BHZ  
+	CNP   BH[ENZ]   
+	COLA   BH[12Z]_00 
+#	COLA   BH[ENZ]_10
+	COLD   BH[ENZ]  
+	CRAG   BH[ENZ]
+	CRQ   BHZ  
+#	CTG   BH[ENZ]   
+	CUT   BHZ 
+	CYK   BH[ENZ] 
+	DAWY   HH[ENZ] 
+	DCPH   BH[ENZ]   
+	DHY   BH[ENZ]    
+ 	DIV   BH[ENZ]   
+	DLBC   BH[ENZ]
+	DOT   BH[EZ]  
+	EGAK   BH[12Z]_00 
+	ETKA   BH[ENZ]  
+	EYAK   BH[ENZ]  
+	FALS   BH[ENZ]     
+	FID   BH[ENZ]  
+	FIRE   BHZ   
+	FYU   BH[ENZ]  
+	GAMB   BH[ENZ]  
+	GCSA   BH[ENZ]  
+	GHO   BH[ENZ]  
+	GLB   BH[ENZ] 
+	GLI   BH[ENZ]  
+	GOAT   BHZ 
+	GRIN   BH[ENZ] 
+	GREN   HH[ENZ]
+	GRES   HH[ENZ]
+	GRNC   BHZ 
+	HDA   BH[ENZ]
+	HIN   BH[ENZ]  
+	HOM   BH[ENZ] 
+	HYT   HH[ENZ]  
+#	IL01   SHZ    
+	IL31   BH[ENZ]   
+	IM01   SHZ  
+	INK   BH[ENZ]
+	ISLE   BH[ENZ] 
+	JIS   BH[ENZ] 
+	KAI   BH[ENZ]  
+	KDAK   BH[12Z]_00      
+	KHIT   BHZ 
+	KIAG   BH[ENZ]
+	KLU   BH[ENZ]  
+	KNK   BH[ENZ]  
+	KTH   BH[ENZ]  
+	LOGN   BH[ENZ]  
+	MCAR	BH[ENZ]
+	MCK	BH[ENZ] 
+	MDM	BH[ENZ] 
+#	MENT	BHZ noisy 
+	MESA	BHZ  
+#	MID	BH[ENZ] off 5/14/2018 noisy
+	MLY	BH[ENZ]  
+	NEA2	BH[ENZ]  
+	NICH   BH[EZ] 
+	NIKH   BH[ENZ] 
+	OHAK   BH[ENZ] 
+	PAX   BH[ENZ]   
+	PIN   BH[ENZ]  
+	PLBC   HH[ENZ] 
+	PMR   BHZ  
+	PNL   BH[ENZ]
+	PPD   BH[ENZ] 
+        PPLA   BH[ENZ]
+	PS01   BH[EZ] 
+	PS04   BH[ENZ] 
+	PS05   BH[ENZ]  
+	PS06   BH[ENZ]  
+	PS07   BH[ENZ]  
+	PS08   BH[ENZ]  
+	PS09   BH[ENZ]  
+	PS10   BH[ENZ]
+	PS11   BH[ENZ]  
+#	PS12   BHZ  noisy 
+	PTPK   BH[ENZ]
+	PWL   BH[ENZ]   
+#	RAG   BHZ 
+	RC01   BH[ENZ] 
+	RDOG   BH[ENZ] 
+	RIDG   BH[ENZ]  
+	RKAV   BHZ  
+	RND   BH[ENZ]  
+	SAMH   BH[ENZ]   
+	SAW   BH[ENZ]     
+	SCM   BH[ENZ]  
+	SCRK   BH[ENZ]
+	SDPT   BH[ENZ] 
+	SII   BH[ENZ] 
+	SIT   BH[ENZ]   
+	SKAG   BH[ENZ]   
+	SKN   BH[ENZ]  
+	SLK   BH[ENZ]
+	SMY   BH[NEZ]  
+	SPIA   BH[ENZ]  
+	SSN   BH[ENZ]   
+	SUCK   BH[ENZ]   
+	SVW2   BHZ 
+	SWD   BH[ENZ]     	     
+	TABL   BH[ENZ] 
+	TGL   BH[ENZ]  
+	TNA   BH[ENZ]     
+	TRF   BH[ENZ]
+	TTA   BHZ  
+#	TT01   SHZ     
+	UNV   BH[ENZ]      
+	VMT   BH[ENZ]  
+	VRDI   BH[ENZ]  
+	WAT1   HH[ENZ] 	 
+	WAT6   BH[ENZ] 	 
+	WAT7   BH[ENZ] 	 
+	WAX   BH[ENZ] 	 
+	WHY   BH[ENZ]  
+	WRAK   BH[12Z]_00
+	WRH   BH[ENZ]    
+	YAH   BH[ENZ]  
+#	YKU2   BHZ  off 10/7/15 noisy 
+	YUK1   HHZ
+	YUK2   HHZ
+	YUK3   HHZ
+	YUK4   HHZ
+	YUK5   HHZ 
+	YUK6   HHZ
+#	YUK7   HHZ off 9/13/2018 noisy
+	YUK8   HHZ 
+	FARO   HHZ
+	FLDN   HHZ
+	MAYO   HHZ
+	MMPY   HHZ
+	TGTN   HHZ
+	WGLY   HHZ
+# TA Alaska and Canada
+	A19K   BH[ENZ]
+	A21K   BH[ENZ]
+	A22K   BH[ENZ]
+	A36M   BH[ENZ]
+	B18K   BH[ENZ]
+	B20K   BH[ENZ]
+	B22K   BH[ENZ]
+	C16K   BH[ENZ]
+	C18K   BH[ENZ]
+	C19K   BH[ENZ]
+	C21K   BH[ENZ]
+	C23K   BH[ENZ]
+	C24K   BH[ENZ]
+	C26K   BH[ENZ]
+	C27K   BH[ENZ]
+	C36M   BH[ENZ]
+	D17K   BH[ENZ]
+	D19K   BH[ENZ]
+	D20K   BH[ENZ]
+	D22K   BH[ENZ]
+	D23K   BH[ENZ]
+	D24K   BH[ENZ]
+	D25K   BH[ENZ]
+	D27M   BH[ENZ]
+	D28M   BH[ENZ]
+	E17K   BH[ENZ]
+	E18K   BH[ENZ]
+	E19K   BH[ENZ]
+	E20K   BH[ENZ]
+	E21K   BH[ENZ]
+	E22K   BH[ENZ]
+	E23K   BH[ENZ]
+	E24K   BH[ENZ]
+	E25K   BH[ENZ]
+	E27K   BH[ENZ]
+	E28M   BH[ENZ]
+	E29M   BH[ENZ]
+	EPYK   BH[ENZ]
+	F14K   BH[ENZ]
+	F15K   BH[ENZ]
+	F17K   BH[ENZ]
+	F18K   BH[ENZ]
+	F19K   BH[ENZ]
+	F20K   BH[ENZ]
+	F21K   BH[ENZ]
+	F22K   BH[ENZ]
+	F24K   BH[ENZ]
+	F25K   BH[ENZ]
+	F26K   BH[ENZ]
+	F28M   BH[ENZ]
+	F30M   BH[ENZ]
+	F31M   BH[ENZ]
+	G15K   BH[ENZ]
+	G16K   BH[ENZ]
+	G17K   BH[ENZ]
+	G18K   BH[ENZ]
+	G19K   BH[ENZ]
+	G21K   BH[ENZ]
+	G23K   BH[ENZ]
+	G24K   BH[ENZ] 
+	G25K   BH[ENZ]
+	G26K   BH[ENZ]
+	G27K   BH[ENZ]
+	G29M   BH[ENZ]
+	G30M   BH[ENZ]
+	G31M   BH[ENZ]
+	HARP   BH[ENZ]
+	H16K   BH[ENZ]
+	H17K   BH[ENZ]
+	H18K   BH[ENZ]
+	H19K   BH[ENZ]
+	H20K   BH[ENZ]
+	H21K   BH[ENZ]
+	H22K   BH[ENZ]
+	H23K   BH[ENZ]
+	H24K   BH[ENZ]
+	H25K   BH[ENZ]
+	H27K   BH[ENZ]
+	H29M   BH[ENZ]
+	H31M   BH[ENZ]
+	I17K   BH[ENZ]
+	I20K   BH[ENZ]
+	I21K   BH[ENZ]
+	I23K   BH[ENZ]
+	I26K   BH[ENZ]
+	I27K   BH[ENZ]
+	I28M   BH[ENZ]
+	I29M   BH[ENZ]
+	I30M   BH[ENZ]
+	J14K   BH[ENZ]
+	J16K   BH[ENZ]
+	J17K   BH[ENZ]
+	J18K   BH[ENZ]
+	J19K   BH[ENZ]
+	J20K   BH[ENZ]
+	J25K   BH[ENZ]
+	J26L   BH[ENZ]
+	J29N   BH[ENZ]
+	J30M   BH[ENZ]
+	K13K   BH[ENZ]
+	K15K   BH[ENZ]
+	K17K   BH[ENZ]
+	K20K   BH[ENZ]
+	K24K   BH[ENZ]
+	K27K   BH[ENZ]
+	K29M   BH[ENZ]
+	L14K   BH[ENZ]
+	L15K   BH[ENZ]
+	L16K   BH[ENZ]
+	L17K   BH[ENZ]
+	L18K   BH[ENZ]
+	L19K   BH[ENZ]
+	L20K   BH[ENZ]
+	L22K   BH[ENZ]
+	L26K   BH[ENZ] 
+	L27K   BH[ENZ]
+	L29M   BH[ENZ]
+	M11K   BH[ENZ]
+	M13K   BH[ENZ]
+	M14K   BH[ENZ]
+	M15K   BH[ENZ]
+	M16K   BH[ENZ]
+	M17K   BH[ENZ]
+	M18K   BH[ENZ]
+	M19K   BH[ENZ]
+	M20K   BH[ENZ]
+	M22K   BH[ENZ]
+	M23K   BH[ENZ]
+	M26K   BH[ENZ]
+	M27K   BH[ENZ] 
+	M29M   BH[ENZ]
+	M30M   BH[ENZ]
+	M31M   BHZ
+	N14K   BH[ENZ]
+	N15K   BH[ENZ]
+	N16K   BH[ENZ]
+	N17K   BH[ENZ]
+	N18K   BH[ENZ]
+	N19K   BH[ENZ]
+	N20K   BH[ENZ]
+	N25K   BH[ENZ]
+	N30M   BH[ENZ]
+	N31M   BH[ENZ]
+	N32M   BH[ENZ]
+	O14K   BH[ENZ]
+	O15K   BH[ENZ]
+	O16K   BH[ENZ]
+	O17K   BH[ENZ]
+	O18K   BH[ENZ]
+	O19K   BH[ENZ]
+	O20K   BH[ENZ]
+	O22K   BH[ENZ]
+	O28M   BH[ENZ]
+	O29M   BH[ENZ]
+	O30N   BH[ENZ]
+#	P08K   BH[ENZ]
+	P16K   BH[ENZ]
+	P17K   BH[ENZ]
+	P18K   BH[ENZ]
+	P19K   BH[ENZ]
+	P23K   BH[ENZ]
+	P29M   BH[ENZ]
+	P30M   BH[ENZ]
+	P32M   BH[ENZ]
+	P33M   BH[ENZ]
+	POKR   BH[ENZ]
+	Q17K   BH[ENZ]
+	Q18K   BH[ENZ]
+	Q19K   BH[ENZ]
+	Q20K   BH[ENZ]
+	Q23K   BH[ENZ]
+	Q32M   BH[ENZ]
+	R16K   BH[ENZ]
+	R17L   BH[ENZ]
+	R18K   BH[ENZ]
+	R31K   BH[ENZ]
+	R32K   BHZ
+	R33M   BH[ENZ]
+	S12K   BH[ENZ]
+	S14K   BH[ENZ]
+	S15K   BH[ENZ]
+	S19K   BH[ENZ]
+	S31K   BH[ENZ]
+	S32K   BH[ENZ]
+	S34M   BH[ENZ]
+	T33K   BH[ENZ]
+	T35M   BH[ENZ]
+	V35K   BH[ENZ]
+	U33K   BHZ
+	U35K   BH[ENZ]
+	TCOL   BH[ENZ]
+	TOLK   BH[ENZ]  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
